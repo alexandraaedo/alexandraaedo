@@ -1,0 +1,24 @@
+# importing libraries
+import pandas as pd # data science essentials
+import matplotlib.pyplot as plt # essential graphical output
+import seaborn as sns # enhanced graphical output
+
+
+# setting pandas print options
+pd.set_option('display.max_rows', 500)
+pd.set_option('display.max_columns', 500)
+pd.set_option('display.width', 1000)
+
+
+# specifying file name
+file = './__datasets/Ames Housing Dataset.xlsx'
+
+
+# reading the file into Python
+housing = pd.read_excel(io = file,
+                        header = 0,
+                        sheet_name = 0)
+
+
+# outputting the first ten rows of the dataset
+housing.head (n = 10)
